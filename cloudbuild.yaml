@@ -4,6 +4,6 @@ steps:
   args: ['build', '-t', 'gcr.io/$PROJECT_ID/eshop::$COMMIT_SHA', '.']
 - name: 'gcr.io/cloud-builders/docker'
   args: ['tag', 'eshoppublicapi:latest', 'gcr.io/$PROJECT_ID/eshop:$COMMIT_SHA']
-  args: ["push", "gcr.io/$PROJECT_ID/eshoppublicapi"]
+  args: ["push", "gcr.io/$PROJECT_ID/eshoppublicapi:latest"]
 #images: ['gcr.io/$PROJECT_ID/$REPO_NAME:$COMMIT_SHA']  
 tags: ['cloud-builders-community']
