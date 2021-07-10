@@ -2,6 +2,6 @@ steps:
 - name: 'gcr.io/$PROJECT_ID/docker-compose'
   args: ['up', '-d']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['tag', 'workspace_app:latest', 'gcr.io/$PROJECT_ID/eshop:$COMMIT_SHA']
+  args: ['tag', 'eshoppublicapi:latest', 'gcr.io/$PROJECT_ID/eshop:$COMMIT_SHA']
 #images: ['gcr.io/$PROJECT_ID/$REPO_NAME:$COMMIT_SHA']  
 tags: ['cloud-builders-community']
