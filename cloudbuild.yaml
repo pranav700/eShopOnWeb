@@ -3,8 +3,8 @@ steps:
 - name: 'gcr.io/$PROJECT_ID/docker-compose'
   args: ['up', '-d']
   #args: ['build', '-t', 'gcr.io/$PROJECT_ID/eshop::$COMMIT_SHA', '.']
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['tag', 'eshoppublicapi:latest', 'gcr.io/$PROJECT_ID/eshop:$COMMIT_SHA']
+#- name: 'gcr.io/cloud-builders/docker'
+#  args: ['tag', 'eshoppublicapi:latest', 'gcr.io/$PROJECT_ID/eshop:$COMMIT_SHA']
 - name: 'gcr.io/cloud-builders/docker'
   args: ['tag', 'eshopwebmvc:latest', 'gcr.io/$PROJECT_ID/eshopmvc:$COMMIT_SHA']
   
@@ -12,7 +12,7 @@ steps:
 
 
 images:
-- 'gcr.io/$PROJECT_ID/eshop:$COMMIT_SHA'
+#- 'gcr.io/$PROJECT_ID/eshop:$COMMIT_SHA'
 - 'gcr.io/$PROJECT_ID/eshopwebmvc:$COMMIT_SHA'
 
 tags: ['cloud-builders-community']
