@@ -11,4 +11,9 @@ services:
     build:
       context: .
       dockerfile: src/PublicApi/Dockerfile
+      
+networks:
+  default:
+    external:
+      name: cloudbuild      
 
